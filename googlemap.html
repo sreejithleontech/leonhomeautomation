@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h6>LEON TECH</h6>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 9.5985, lng: 76.3119}; 
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0vlqzu45wviNzNj_eRHKLjNlnv-EPl_w&callback=initMap">
+    </script>
+  </body>
+</html>
